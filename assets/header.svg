@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 260" width="840" height="260" role="img" aria-labelledby="title desc">
+  <title id="title">Al-Hussein Raed — Software Developer</title>
+  <desc id="desc">Name and role on a dark plum card, beside a slowly sweeping radar display.</desc>
+
+  <defs>
+    <clipPath id="card">
+      <rect width="840" height="260" rx="14"/>
+    </clipPath>
+
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#f8e9d8" stroke-opacity=".045"/>
+    </pattern>
+
+    <!-- fades the radar out before it reaches the text -->
+    <linearGradient id="reveal" gradientUnits="userSpaceOnUse" x1="505" y1="0" x2="650" y2="0">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <mask id="radar-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="840" height="260">
+      <rect width="840" height="260" fill="url(#reveal)"/>
+    </mask>
+  </defs>
+
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+
+    .sweep { animation: spin 7s linear infinite; }
+    .blip  { opacity: .14; animation: ping 7s linear infinite; }
+    .live  { animation: breathe 2.8s ease-in-out infinite; }
+
+    @keyframes spin    { to { transform: rotate(360deg); } }
+    @keyframes ping    { 0% { opacity: 1; } 38%, 100% { opacity: .14; } }
+    @keyframes breathe { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sweep, .blip, .live { animation: none; }
+      .blip { opacity: .7; }
+    }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="840" height="260" fill="#241d27"/>
+    <rect width="840" height="260" fill="url(#grid)"/>
+
+    <g mask="url(#radar-mask)">
+      <g transform="translate(676 130)">
+        <g fill="none" stroke="#f8e9d8" stroke-opacity=".16">
+          <circle r="38"/>
+          <circle r="76"/>
+          <circle r="114"/>
+          <circle r="152"/>
+          <path d="M-170 0H170M0 -140V140" stroke-opacity=".1"/>
+        </g>
+
+        <g class="sweep">
+          <path d="M0 0L152 0A152 152 0 0 0 142.83 -51.99Z" fill="#c5e35b" fill-opacity=".16"/>
+          <path d="M0 0L142.83 -51.99A152 152 0 0 0 116.44 -97.7Z" fill="#c5e35b" fill-opacity=".09"/>
+          <path d="M0 0L116.44 -97.7A152 152 0 0 0 76 -131.64Z" fill="#c5e35b" fill-opacity=".04"/>
+          <path d="M0 0H152" stroke="#c5e35b" stroke-width="1.5" stroke-opacity=".9"/>
+        </g>
+
+        <!-- each delay is (angle / 360) * 7s, so a blip lights as the sweep crosses it -->
+        <circle class="blip" cx="96" cy="52" r="4" fill="#e77e65" style="animation-delay: .55s"/>
+        <circle class="blip" cx="-30" cy="78" r="3.5" fill="#c5e35b" style="animation-delay: 2.16s"/>
+        <circle class="blip" cx="20" cy="-100" r="3" fill="#c5e35b" style="animation-delay: 5.47s"/>
+        <circle class="blip" cx="58" cy="-36" r="3.5" fill="#c5e35b" style="animation-delay: 6.38s"/>
+
+        <circle r="3" fill="#c5e35b"/>
+      </g>
+    </g>
+
+    <rect x="48" y="55" width="9" height="9" fill="#c5e35b"/>
+    <text class="mono" x="67" y="64" font-size="14" letter-spacing=".04em" fill="#c5e35b">~/distru3</text>
+
+    <text class="sans" x="46" y="138" font-size="58" font-weight="700" letter-spacing="-.02em" fill="#f8e9d8">Al-Hussein Raed</text>
+    <text class="sans" x="48" y="178" font-size="24" font-weight="500" fill="#f8e9d8" fill-opacity=".92">Software Developer</text>
+
+    <text class="mono" x="48" y="218" font-size="14" fill="#c0afaf">Sharqia, Egypt</text>
+    <circle class="live" cx="196" cy="213" r="4" fill="#c5e35b"/>
+    <text class="mono" x="208" y="218" font-size="14" fill="#c0afaf">open to software roles</text>
+  </g>
+
+  <rect x=".5" y=".5" width="839" height="259" rx="13.5" fill="none" stroke="#f8e9d8" stroke-opacity=".14"/>
+</svg>
