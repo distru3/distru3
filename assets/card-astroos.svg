@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120" role="img" aria-labelledby="title desc">
+  <title id="title">Astroos</title>
+  <desc id="desc">Radar pulses travel from a satellite to the ground, where a flooded area lights up.</desc>
+  <defs>
+    <clipPath id="card"><rect width="400" height="120" rx="10"/></clipPath>
+    <clipPath id="stage"><rect x="236" width="164" height="120"/></clipPath>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#f8e9d8" stroke-opacity=".045"/></pattern>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .wave  { opacity: 0; animation: wave 3.6s ease-out infinite; }
+    .flood { opacity: .25; animation: flood 3.6s ease-in-out infinite; }
+    @keyframes wave  { 0% { opacity: 0; } 15% { opacity: .85; } 55%, 100% { opacity: 0; } }
+    @keyframes flood { 0%, 35% { opacity: .25; } 55% { opacity: 1; } 100% { opacity: .25; } }
+    @media (prefers-reduced-motion: reduce) {
+      .wave { animation: none; opacity: .4; }
+      .flood { animation: none; opacity: .8; }
+    }
+  </style>
+  <g clip-path="url(#card)">
+    <rect width="400" height="120" fill="#241d27"/>
+    <rect width="400" height="120" fill="url(#grid)"/>
+    <rect width="4" height="120" fill="#c5e35b"/>
+    <text class="sans" x="24" y="62" font-size="30" font-weight="700" letter-spacing="-.02em" fill="#f8e9d8">Astroos</text>
+    <text class="mono" x="25" y="86" font-size="11" letter-spacing=".12em" fill="#c5e35b">DERNA SEEN BY RADAR</text>
+    <g clip-path="url(#stage)">
+      <circle class="wave" cx="372" cy="20" r="26" fill="none" stroke="#c5e35b" stroke-width="1.5" style="animation-delay: 0s"/><circle class="wave" cx="372" cy="20" r="48" fill="none" stroke="#c5e35b" stroke-width="1.5" style="animation-delay: 0.35s"/><circle class="wave" cx="372" cy="20" r="70" fill="none" stroke="#c5e35b" stroke-width="1.5" style="animation-delay: 0.7s"/><circle class="wave" cx="372" cy="20" r="92" fill="none" stroke="#c5e35b" stroke-width="1.5" style="animation-delay: 1.05s"/>
+      <path class="flood" d="M286 88Q313 112 340 88Z" fill="#e77e65"/>
+      <path d="M236 88Q262 76 286 88Q313 112 340 88Q366 74 400 86" fill="none" stroke="#f8e9d8" stroke-opacity=".45" stroke-width="1.5"/>
+      <g transform="translate(372 20) rotate(40)" fill="#f8e9d8">
+        <rect x="-4" y="-4" width="8" height="8" rx="1.5"/>
+        <rect x="-15" y="-2.5" width="10" height="5" fill-opacity=".6"/><rect x="5" y="-2.5" width="10" height="5" fill-opacity=".6"/>
+      </g>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="399" height="119" rx="9.5" fill="none" stroke="#f8e9d8" stroke-opacity=".14"/>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120" role="img" aria-labelledby="title desc">
+  <title id="title">Tether</title>
+  <desc id="desc">A daily-limit ring fills, turns coral when the limit is reached, and shows a pause symbol.</desc>
+  <defs>
+    <clipPath id="card"><rect width="400" height="120" rx="10"/></clipPath>
+    <clipPath id="stage"><rect x="236" width="164" height="120"/></clipPath>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#f8e9d8" stroke-opacity=".045"/></pattern>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .fill  { stroke-dasharray: 201.1; stroke-dashoffset: 201.1; animation: fill 6s linear infinite; }
+    .pause { opacity: 0; animation: pause 6s linear infinite; }
+    @keyframes fill {
+      0%   { stroke-dashoffset: 201.1; stroke: #c5e35b; opacity: 1; }
+      60%  { stroke-dashoffset: 0; stroke: #c5e35b; opacity: 1; }
+      64%, 92% { stroke-dashoffset: 0; stroke: #e77e65; opacity: 1; }
+      100% { stroke-dashoffset: 0; stroke: #e77e65; opacity: 0; }
+    }
+    @keyframes pause { 0%, 62% { opacity: 0; } 66%, 92% { opacity: 1; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .fill { animation: none; stroke-dashoffset: 50.3; }
+      .pause { animation: none; }
+    }
+  </style>
+  <g clip-path="url(#card)">
+    <rect width="400" height="120" fill="#241d27"/>
+    <rect width="400" height="120" fill="url(#grid)"/>
+    <rect width="4" height="120" fill="#c5e35b"/>
+    <text class="sans" x="24" y="62" font-size="30" font-weight="700" letter-spacing="-.02em" fill="#f8e9d8">Tether</text>
+    <text class="mono" x="25" y="86" font-size="11" letter-spacing=".12em" fill="#c5e35b">SCREEN-TIME LIMITER</text>
+    <g clip-path="url(#stage)">
+      <g transform="translate(322 60)">
+        <circle r="32" fill="none" stroke="#f8e9d8" stroke-opacity=".14" stroke-width="6"/>
+        <circle class="fill" r="32" fill="none" stroke="#c5e35b" stroke-width="6" stroke-linecap="round" transform="rotate(-90)"/>
+        <g class="pause" fill="#e77e65"><rect x="-9" y="-11" width="6" height="22" rx="1.5"/><rect x="3" y="-11" width="6" height="22" rx="1.5"/></g>
+      </g>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="399" height="119" rx="9.5" fill="none" stroke="#f8e9d8" stroke-opacity=".14"/>
+</svg>

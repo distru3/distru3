@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120" role="img" aria-labelledby="title desc">
+  <title id="title">Soraya</title>
+  <desc id="desc">An audio waveform in two colours, one per narrating voice.</desc>
+  <defs>
+    <clipPath id="card"><rect width="400" height="120" rx="10"/></clipPath>
+    <clipPath id="stage"><rect x="236" width="164" height="120"/></clipPath>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#f8e9d8" stroke-opacity=".045"/></pattern>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .bar { transform-box: fill-box; transform-origin: center; animation: speak 1s ease-in-out infinite alternate; }
+    @keyframes speak { from { transform: scaleY(.3); } to { transform: scaleY(1); } }
+    @media (prefers-reduced-motion: reduce) { .bar { animation: none; } }
+  </style>
+  <g clip-path="url(#card)">
+    <rect width="400" height="120" fill="#241d27"/>
+    <rect width="400" height="120" fill="url(#grid)"/>
+    <rect width="4" height="120" fill="#c5e35b"/>
+    <text class="sans" x="24" y="62" font-size="30" font-weight="700" letter-spacing="-.02em" fill="#f8e9d8">Soraya</text>
+    <text class="mono" x="25" y="86" font-size="11" letter-spacing=".12em" fill="#c5e35b">MULTI-VOICE AUDIOBOOKS</text>
+    <g clip-path="url(#stage)">
+      <rect class="bar" x="264" y="51.0" width="6" height="18" rx="3" fill="#c5e35b" style="animation-duration: 0.8s; animation-delay: -0.0s"/><rect class="bar" x="275" y="43.0" width="6" height="34" rx="3" fill="#c5e35b" style="animation-duration: 1.06s; animation-delay: -0.17s"/><rect class="bar" x="286" y="34.0" width="6" height="52" rx="3" fill="#c5e35b" style="animation-duration: 1.32s; animation-delay: -0.34s"/><rect class="bar" x="297" y="45.0" width="6" height="30" rx="3" fill="#c5e35b" style="animation-duration: 0.93s; animation-delay: -0.51s"/><rect class="bar" x="308" y="38.0" width="6" height="44" rx="3" fill="#e77e65" style="animation-duration: 1.19s; animation-delay: -0.68s"/><rect class="bar" x="319" y="30.0" width="6" height="60" rx="3" fill="#e77e65" style="animation-duration: 0.8s; animation-delay: -0.85s"/><rect class="bar" x="330" y="41.0" width="6" height="38" rx="3" fill="#e77e65" style="animation-duration: 1.06s; animation-delay: -1.02s"/><rect class="bar" x="341" y="49.0" width="6" height="22" rx="3" fill="#c5e35b" style="animation-duration: 1.32s; animation-delay: -1.19s"/><rect class="bar" x="352" y="37.0" width="6" height="46" rx="3" fill="#c5e35b" style="animation-duration: 0.93s; animation-delay: -1.36s"/><rect class="bar" x="363" y="46.0" width="6" height="28" rx="3" fill="#c5e35b" style="animation-duration: 1.19s; animation-delay: -1.53s"/><rect class="bar" x="374" y="53.0" width="6" height="14" rx="3" fill="#c5e35b" style="animation-duration: 0.8s; animation-delay: -1.7s"/>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="399" height="119" rx="9.5" fill="none" stroke="#f8e9d8" stroke-opacity=".14"/>
+</svg>
